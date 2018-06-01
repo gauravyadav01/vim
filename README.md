@@ -1,6 +1,8 @@
 # vim
 vimrc and tip
 
+https://vim.rtorr.com/
+
 ### Copy
 
 - yy  : yank the current line, including the newline character at the end of the line
