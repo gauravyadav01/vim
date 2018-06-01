@@ -1,6 +1,15 @@
 # vim
 vimrc and tip
 
+### Copy
+
+- yy  : yank the current line, including the newline character at the end of the line
+- y$  : yank to the end of the current line (but don't yank the newline character)
+- yiw : yank the current word (excluding surrounding whitespace)
+- yaw : yank the current word (including leading or trailing whitespace)
+- ytx : yank from the current cursor position up to and before the character (til x)
+- yfx : yank from the current cursor position up to and including the character (find x)
+
 ### DELTE
 
 - diw : to delete the current word 
