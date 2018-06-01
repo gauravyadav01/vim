@@ -35,9 +35,10 @@ guu : lowercase line
 
 gUU : uppercase line
 
-### Buffer
-- :bd : Close current buffer 
-
 ~   : invert case (upper->lower; lower->upper) of current character
 
 gf  : open file name under cursor (SUPER)
+
+### Buffer
+- :bd : Close current buffer 
+- CTRL-W o : Delete all windows during split except one you are using
