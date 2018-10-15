@@ -45,3 +45,4 @@ gf  : open file name under cursor (SUPER)
 - :bd : Close current buffer 
 - CTRL-w o : Delete all windows during split except one you are using
 
+
