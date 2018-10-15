@@ -1,4 +1,4 @@
-# vim Readme
+# vim
 vimrc and tip
 
 https://vim.rtorr.com/
