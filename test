@@ -1,1 +1,94 @@
 
+#!/usr/bin/env bash
+red=`tput setaf 1`
+
+mac()
+{
+  xcode-select --version > /dev/null
+  if [ $? != 0 ];then
+    xcode-select --install
+  else
+    echo "${red}xcode-select is already installed"
+  fi
+  brew --version > /dev/null
+  if [ $? != 0 ];then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo "Homebrew is already installed"
+  fi
+  brew cask list | grep -i 'google-chrome' > /dev/null
+  if [ $? != 0 ];then
+    brew cask install google-chrome
+  else
+    echo "google-chrome is already installed"
+  fi
+  rvm --version > /dev/null
+  if [ $? != 0 ];then
+    curl -sSL https://get.rvm.io | bash -s stable --ruby
+    source ~/.rvm/scripts/rvm
+  else
+    echo "RVM is already installed"
+  fi
+  pyenv -v > /dev/null
+  if [ $? != 0 ];then
+    brew install pyenv
+    pyenv init
+  else
+    echo "pyenv is laready installed"
+  fi
+  pyenv install --list
+  echo "Above python are available"
+  read -p "please input correct version[3.6.5/n]: " PYTHON_VERSION
+  PYTHON_VERSION=${PYTHON_VERSION:-3.6.5}
+  if [ $PYTHON_VERSION == n ];then
+    echo "Not installing python"
+  else
+    pyenv install $PYTHON_VERSION
+    pyenv global $PYTHON_VERSION
+  fi
+  #Install fish shell
+  which fish
+  if [ $? != 0 ];then
+    brew install fish
+    sudo echo /usr/local/bin/fish >> /etc/shells
+    chsh -s /usr/local/bin/fish
+  else
+    echo "Fish shell is already installed"
+  fi
+  curl -L --create-dirs -o ~/.config/fish/functions/rvm.fish https://raw.github.com/lunks/fish-nuggets/master/functions/rvm.fish
+  echo "rvm default" >> ~/.config/fish/config.fish
+  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+  fish -c "fisher pyenv"
+  fish_update_completions
+  curl -o ~/.vimrc https://raw.githubusercontent.com/gauravyadav01/vim/master/vimrc
+  vim +PlugInstall +qall
+  pip install ansible
+  vagrant --version
+  if [ $? ~= 0 ];then
+    brew cask install vagrant
+  else
+    echo "Vagrant is already installed"
+  fi
+  which virtualbox
+  if [ $? ~= 0 ];then
+    brew cask install virtualbox
+  else
+    echo "Vagrant is already installed"
+  fi
+}
+
+OS=`uname`
+
+case "$OS" in
+  Darwin)
+    mac
+    ;;
+  Linux)
+    linux
+    ;;
+  *)
+    echo "Does not support this OS"
+    ;;
+esac
+
+tput sgr0
