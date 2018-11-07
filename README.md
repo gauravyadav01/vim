@@ -44,6 +44,6 @@ https://vim.rtorr.com/
 - g/ insearch stay
 
 ### Files
-- <C-s> save file 
-- <C-d> save file and quit 
-- <C-q> quit without saving
+- CTRL-s save file 
+- CTRL-d save file and quit 
+- CTRL-q quit without saving
