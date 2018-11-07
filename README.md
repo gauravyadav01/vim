@@ -42,3 +42,8 @@ https://vim.rtorr.com/
 - / forward searching 
 - ? backward searching 
 - g/ insearch stay
+
+### Files
+- <C-s> save file 
+- <C-d> save file and quit 
+- <C-q> quit without saving
