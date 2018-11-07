@@ -46,3 +46,7 @@ gf  : open file name under cursor (SUPER)
 - CTRL-w o : Delete all windows during split except one you are using
 
 
+### Insearch
+- / forward searching 
+- ? backward searching 
+- g/ insearch stay
