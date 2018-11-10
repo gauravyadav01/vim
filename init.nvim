@@ -45,6 +45,13 @@ let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
 
+" Trim Whitespaces
+function! TrimWhitespace()
+    let l:save = winsaveview()
+    %s/\\\@<!\s\+$//e
+    call winrestview(l:save)
+endfunction
+
 "
 
 "*****************************************************************************
@@ -106,6 +113,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/defx.nvim')
   call dein#add('Yggdroot/indentLine')
   call dein#add('haya14busa/incsearch.vim')
+  call dein#add('tpope/vim-sensible')
+  call dein#add('tpope/vim-surround')
  " call dein#add('vim-airline/vim-airline')
 "  call dein#add('vim-airline/vim-airline-themes')
 
