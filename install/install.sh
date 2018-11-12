@@ -96,6 +96,7 @@ fi
 cp -p ../zshrc $HOME/
 mkdir -p $HOME/.config/nvim
 cp -p ../init.vim $HOME/.config/nvim/
+nvim +"call dein#install()" +qall
 
 running "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true;ok
