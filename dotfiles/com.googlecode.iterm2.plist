@@ -12,8 +12,6 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
-	<key>CGFontRenderingFontSmoothingDisabled</key>
-	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Untitled</key>
@@ -1398,14 +1396,10 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 1</string>
+	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
-	<key>NSNavLastUserSetHideExtensionButtonState</key>
-	<true/>
+	<string>~/vim/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 448}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
@@ -1438,21 +1432,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>448 305 969 183 0 0 1920 1200 </string>
-	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 598 620 392 0 0 1920 1177 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>493 258 609 401 0 0 1920 1200 </string>
+	<string>918 110 936 370 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>327 552 796 486 0 0 1920 1200 </string>
+	<string>481 421 796 486 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 38 730 477 0 0 1920 1200 </string>
+	<string>0 41 730 452 0 0 1920 1200 </string>
 	<key>NeverWarnAboutShortLivedSessions_45FA0273-9E74-4291-9AA1-3099244BD6E4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_45FA0273-9E74-4291-9AA1-3099244BD6E4_selection</key>
@@ -1495,13 +1480,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.36550098657608032</real>
+				<real>0.40921556949615479</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.65722763538360596</real>
+				<real>0.81524658203125</real>
 				<key>Red Component</key>
-				<real>0.44848346710205078</real>
+				<real>0.52471225356105067</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -1573,13 +1558,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3311847448348999</real>
+				<real>0.31152288615703583</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.64355474710464478</real>
+				<real>0.7503662109375</real>
 				<key>Red Component</key>
-				<real>0.42283037304878235</real>
+				<real>0.440274276798716</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -1664,13 +1649,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.48615753650665283</real>
+				<real>0.12692368542775512</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.59935474395751953</real>
+				<real>0.2993377846132152</real>
 				<key>Red Component</key>
-				<real>0.85562235116958618</real>
+				<real>0.689666748046875</real>
 			</dict>
 			<key>BM Growl</key>
 			<true/>
@@ -2113,11 +2098,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>HackNerdFontComplete-Regular 12</string>
+			<string>HackNerdFontComplete-Regular 10</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Light 15</string>
+			<string>SFMono-Light 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2200,33 +2185,12 @@
 			<string>/Users/gy</string>
 		</dict>
 	</array>
-	<key>NoSyncHaveRequestedFullDiskAccess</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>89C4CADB-292A-4834-88CF-6822463B8F94</string>
-	<key>NoSyncLastTipTime</key>
-	<real>562962652.63357997</real>
-	<key>NoSyncPermissionToShowTip</key>
-	<true/>
+	<string>14E4F52C-11AC-4464-8336-1C0141A98FF1</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>562298105.24580002</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-		<string>0003</string>
-		<string>0004</string>
-		<string>0005</string>
-		<string>0006</string>
-		<string>0007</string>
-		<string>0008</string>
-	</array>
+	<real>563686067.84248495</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -2267,7 +2231,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/gy</string>
+	<string>/Users/gyadav/vim/dotfiles</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -2275,11 +2239,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=31</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=74</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-11-10T01:11:41Z</date>
+	<date>2018-11-12T03:33:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SmartPlacement</key>

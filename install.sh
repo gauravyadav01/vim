@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # include my library helpers for colorized echo and require_brew, etc
-source ../lib/echos.sh
-source ../lib/requires.sh
+source lib/echos.sh
+source lib/requires.sh
 
 #####
 # install homebrew (CLI Packages)
@@ -35,44 +35,7 @@ else
   fi
 fi
 
-
-
-
-#####
-# install brew cask (UI Packages)
-#####
-running "checking brew-cask install"
-output=$(brew tap | grep cask)
-if [[ $? != 0 ]]; then
-  action "installing brew-cask"
-  require_brew caskroom/cask/brew-cask
-fi
-brew tap caskroom/versions > /dev/null 2>&1
-brew tap caskroom/fonts >/dev/null 2>&1
-ok
-
-
-require_brew git
-require_brew fontconfig
-require_brew zsh
-require_brew nvim
-require_brew pyenv
-require_brew zsh-syntax-highlighting
-
-
-
-#To Do copy .zshrc file
-
-require_brew terraform
-require_brew terragrunt
-require_brew vagrant-completion
-
-require_cask iterm2
-require_cask vagrant
-require_cask virtualbox
-require_cask the-unarchiver
-require_cask mounty
-require cask font-hack-nerd-font
+env brew bundle 
 
 
 #Setup zsh as your shell
@@ -85,10 +48,9 @@ if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   ok
 fi
 
-
-#Install zplug
+#Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+  curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh >/dev/null 2>&1
 fi
 
 #Install rvm  with stable ruby 
@@ -96,10 +58,11 @@ if [ ! -d "$HOME/.rvm" ]; then
   curl -sSL https://get.rvm.io | bash -s stable --ruby
 fi
 
-
-cp -p ../zshrc $HOME/.zshrc
+cp -pr dotfiles $HOME
 mkdir -p $HOME/.config/nvim
-cp -p ../init.vim $HOME/.config/nvim/
+ln -sf $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/init.vim $HOME/.config/nvim/init.vim
+
 
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > dein.sh
 # For example, we just use `~/.cache/dein` as installation directory
