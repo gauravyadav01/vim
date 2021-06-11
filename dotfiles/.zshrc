@@ -14,7 +14,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git autojump brew bundler common-aliases debian dirhistory dnf gem jsontools knife node pip tig vagrant terraform zsh-syntax-highlighting
+  aws autojump brew bundler common-aliases debian dirhistory dnf docker gem git jsontools knife node pip tig vagrant terraform terragrunt kubectl zsh-autosuggestions zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -29,9 +29,24 @@ source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
 alias vi="nvim"
 alias vim="nvim"
+alias tn="tmux new -s"
+alias ta="tmux attach -t"
+alias kd="tmux delete"
+alias t="tmux"
+alias f="fzf"
+alias td="tmux detach"
+alias k=”kubectl”
+alias kgd="k get deploy"
+alias kgp="k get pods"
+alias kgn="k get nodes"
+alias kgs="k get svc"
+alias kdp="kubectl describe pod"
+alias kdd="kubectl describe deployment"
+alias kds="kubectl describe service"
+alias kdn="kubectl describe node"
 
 HISTFILE="$HOME/.zhistory"
 HISTSIZE=10000000
@@ -85,14 +100,13 @@ zstyle ':completion:*' rehash true
 # Keep directories and files separated
 zstyle ':completion:*' list-dirs-first true
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+alias k=kubectl
+complete -F __start_kubectl k
 
-
-
-# ===================
-#    PLUGINS
-# ===================
-
-# brew install zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-compinit
-source /Users/gy/.pyenv/versions/3.7.0/bin/aws_zsh_completer.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
